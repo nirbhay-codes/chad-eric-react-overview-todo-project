@@ -1,4 +1,4 @@
-function NewTodoForm() {
+function NewTodoForm(props) {
   return (
     <div className="mt-5">
       <form>
@@ -20,6 +20,9 @@ function NewTodoForm() {
             onChange={(e) => console.log(e.target.value)}
           ></textarea>
         </div>
+        <button type="button" className="btn btn-primary mt-3">
+          Add Todo
+        </button>
       </form>
     </div>
   );
