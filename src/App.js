@@ -17,11 +17,17 @@ function App() {
     },
   ]);
 
-  const addTodo = () => {
+  const addTodo = (description, assigned) => {
+    let rowNumber = 0;
+    if (todos.length > 0) {
+      rowNumber = todos[todos.length - 1].rowNumber + 1; // this is to get the rowNumber + 1 of the last element that was added as we will be adding Delete functionality and we can delete any element.
+    } else {
+      rowNumber = 1;
+    }
     const newTodo = {
-      rowNumber: 1,
-      rowDescription: "Feed puppy",
-      rowAssigned: "User One",
+      rowNumber: rowNumber,
+      rowDescription: description,
+      rowAssigned: assigned,
     };
     setTodos((todos) => [...todos, newTodo]);
   };
@@ -38,7 +44,7 @@ function App() {
           >
             {showAddTodoForm ? "Close" : "Add Todo"}
           </button>
-          {showAddTodoForm && <NewTodoForm />}
+          {showAddTodoForm && <NewTodoForm addTodo={addTodo} />}
         </div>
       </div>
     </div>
