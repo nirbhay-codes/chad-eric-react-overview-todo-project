@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chad-eric-react-overview-todo-project/static/css/main.073c9b0a.css",
+    "main.js": "/chad-eric-react-overview-todo-project/static/js/main.325719bd.js",
+    "static/js/787.2a0e7894.chunk.js": "/chad-eric-react-overview-todo-project/static/js/787.2a0e7894.chunk.js",
+    "index.html": "/chad-eric-react-overview-todo-project/index.html",
+    "main.073c9b0a.css.map": "/chad-eric-react-overview-todo-project/static/css/main.073c9b0a.css.map",
+    "main.325719bd.js.map": "/chad-eric-react-overview-todo-project/static/js/main.325719bd.js.map",
+    "787.2a0e7894.chunk.js.map": "/chad-eric-react-overview-todo-project/static/js/787.2a0e7894.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.325719bd.js"
+  ]
+}
