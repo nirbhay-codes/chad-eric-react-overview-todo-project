@@ -17,7 +17,7 @@ function App() {
     },
   ]);
 
-  const addTodo = (description, assigned) => {
+  const addTodo = (description: string, assigned: string) => {
     let rowNumber = 0;
     if (todos.length > 0) {
       rowNumber = todos[todos.length - 1].rowNumber + 1; // this is to get the rowNumber (+ 1) of the last element that was added as we will be adding Delete functionality and we can delete any row, which means the last available rowNumber may be lesser than the last rowNumber we added.
@@ -32,7 +32,7 @@ function App() {
     setTodos((todos) => [...todos, newTodo]);
   };
 
-  const deleteTodo = (deleteTodoRowNumber) => {
+  const deleteTodo = (deleteTodoRowNumber: number) => {
     let filtered = todos.filter((todo) => {
       return todo.rowNumber !== deleteTodoRowNumber;
     });

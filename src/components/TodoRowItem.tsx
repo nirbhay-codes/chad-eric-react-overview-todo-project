@@ -1,14 +1,11 @@
-function TodoRowItem(props) {
-  //   const handleClick = () => {
-  //     const confirm = window.confirm(
-  //       "Are you sure you want to delete this row now ?"
-  //     );
-  //     if (confirm) {
-  //       console.log("calling deleteTodo");
-  //       props.deleteTodo(props.rowNumber);
-  //     }
-  //   };
+import React from "react";
 
+function TodoRowItem(props: {
+  rowNumber: number;
+  rowDescription: string;
+  rowAssigned: string;
+  deleteTodo: Function;
+}) {
   return (
     <tr
       onClick={() =>
