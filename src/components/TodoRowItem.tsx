@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-function TodoRowItem(props: {
+export const TodoRowItem: React.FC<{
   rowNumber: number;
   rowDescription: string;
   rowAssigned: string;
   deleteTodo: Function;
-}) {
+}> = (props) => {
   return (
     <tr
       onClick={() =>
-        window.confirm("Are you sure you want to delete this row?")
+        window.confirm('Are you sure you want to delete this row?')
           ? props.deleteTodo(props.rowNumber)
           : null
       }
@@ -19,6 +19,4 @@ function TodoRowItem(props: {
       <td>{props.rowAssigned}</td>
     </tr>
   );
-}
-
-export default TodoRowItem;
+};

@@ -1,13 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
-function NewTodoForm(props: { addTodo: Function }) {
-  const [assigned, setAssigned] = useState("");
-  const [description, setDescription] = useState("");
+export const NewTodoForm: React.FC<{ addTodo: Function }> = (props) => {
+  const [assigned, setAssigned] = useState('');
+  const [description, setDescription] = useState('');
 
   function submitTodo() {
     // get the state from assigned, description and call addTodo() which is passed as a prop.
-    props.addTodo(description, assigned);
+    if (description !== '' && assigned !== '') {
+      props.addTodo(description, assigned);
+      setDescription('');
+      setAssigned('');
+    }
   }
 
   return (
@@ -43,6 +47,4 @@ function NewTodoForm(props: { addTodo: Function }) {
       </form>
     </div>
   );
-}
-
-export default NewTodoForm;
+};

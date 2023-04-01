@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import NewTodoForm from "./components/NewTodoForm";
-import "./App.css";
-import TodoTable from "./components/TodoTable";
+import React, { useState } from 'react';
+import { NewTodoForm } from './components/NewTodoForm';
+import './App.css';
+import { TodoTable } from './components/TodoTable';
 
-function App() {
+export const App = () => {
   const [showAddTodoForm, setShowAddTodoForm] = useState(false);
 
   const [todos, setTodos] = useState([
-    { rowNumber: 1, rowDescription: "Feed puppy", rowAssigned: "User One" },
-    { rowNumber: 2, rowDescription: "Water plants", rowAssigned: "User Two" },
-    { rowNumber: 3, rowDescription: "Make dinner", rowAssigned: "User One" },
+    { rowNumber: 1, rowDescription: 'Feed puppy', rowAssigned: 'User One' },
+    { rowNumber: 2, rowDescription: 'Water plants', rowAssigned: 'User Two' },
+    { rowNumber: 3, rowDescription: 'Make dinner', rowAssigned: 'User One' },
     {
       rowNumber: 4,
-      rowDescription: "Charge phone battery",
-      rowAssigned: "User One",
+      rowDescription: 'Charge phone battery',
+      rowAssigned: 'User One',
     },
   ]);
 
@@ -51,13 +51,11 @@ function App() {
             onClick={() => setShowAddTodoForm(!showAddTodoForm)}
             className="btn btn-primary"
           >
-            {showAddTodoForm ? "Close" : "Add Todo"}
+            {showAddTodoForm ? 'Close' : 'Add Todo'}
           </button>
           {showAddTodoForm && <NewTodoForm addTodo={addTodo} />}
         </div>
       </div>
     </div>
   );
-}
-
-export default App;
+};
